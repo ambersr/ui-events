@@ -101,4 +101,18 @@ function dubbelklikAnimation() {
 
 // console.log('shake!');
 
+// Link 6 Fade wanneer focus (focus & blur)
+const fadeLink = document.querySelector('a:nth-of-type(6)');
+
+fadeLink.addEventListener('focus', () => {
+    fadeLink.classList.add('animate');
+});
+
+// Voeg een 'blur' event listener toe om de animatie te resetten
+fadeLink.addEventListener('blur', () => {
+  fadeLink.classList.remove('animate');
+});
+
+fadeLink.addEventListener('animationend', fadeAnimation)
+
 
