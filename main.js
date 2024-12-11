@@ -22,28 +22,13 @@ function jumpHandler() {
 interaction.addEventListener('animationend', jumpHandler)
 
 
-// Ga zelf verder met de overige elementen, aan de hand van de instructies
-// Maak bijvoorbeeld een bibber animatie als je op iets klikt
-
-// // Stap 1: querySelector
-
-// let bibberLink = document.querySelector('a:nth-of-type(1)')
-
-// // Stap 2: addEventListener
-
-// bibberLink.addEventListener('click, bibberAnimation')
-
-// // Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
-
-// function bibberAnimation() { 
-
-// bibberLink.classList.toggle('jump')
-// }
 
 
 
 
-// Link 1 Knop draggen naar droparea
+
+
+// Link 1 Knop draggen naar droparea (Dragstart & dragend)
 const dragLink = document.querySelector('a:nth-of-type(1)');
 const dropArea = document.querySelector('.drop-area');
 
@@ -65,3 +50,15 @@ dropArea.addEventListener('drop', (e) => {
   dropArea.appendChild(dragging); // Verplaats het gesleepte element naar de drop area
 });
 
+// Link 2 Hover shake (Mouseover)
+let shakeLink = document.querySelector('a:nth-of-type(2)')
+
+shakeLink.addEventListener('mouseover', shakeAnimation)
+
+function shakeAnimation() {
+
+  shakeLink.classList.toggle('shake')
+  
+}
+
+shakeLink.addEventListener('animationend', shakeAnimation)
