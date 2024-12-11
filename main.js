@@ -76,8 +76,6 @@ function blurAnimation() {
 
 // console.log('shake!');
 
-
-
 // Link 4 Knop flip animatie (keyup)
   const keyLink = document.querySelector('a:nth-of-type(4)');
 
@@ -90,4 +88,17 @@ function blurAnimation() {
     });
 
 // console.log('shake!');
+
+// Link 5 Dubbeklik bounce (dblclick)
+let dubbelklikLink = document.querySelector('a:nth-of-type(5)')
+
+dubbelklikLink.addEventListener('dblclick', dubbelklikAnimation)
+
+function dubbelklikAnimation() {
+  
+  dubbelklikLink.classList.toggle('shaker')
+}
+
+// console.log('shake!');
+
 
