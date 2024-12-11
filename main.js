@@ -25,11 +25,43 @@ interaction.addEventListener('animationend', jumpHandler)
 // Ga zelf verder met de overige elementen, aan de hand van de instructies
 // Maak bijvoorbeeld een bibber animatie als je op iets klikt
 
-// Stap 1: querySelector
-// let bibberLink = document.querySelector...
+// // Stap 1: querySelector
 
-// Stap 2: addEventListener
-// bibberLink.addEventListener...
+// let bibberLink = document.querySelector('a:nth-of-type(1)')
 
-// Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
-// bibberLink.classList.toggle...
+// // Stap 2: addEventListener
+
+// bibberLink.addEventListener('click, bibberAnimation')
+
+// // Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
+
+// function bibberAnimation() { 
+
+// bibberLink.classList.toggle('jump')
+// }
+
+
+
+
+// Link 1 Knop draggen naar droparea
+const dragLink = document.querySelector('a:nth-of-type(1)');
+const dropArea = document.querySelector('.drop-area');
+
+dragLink.addEventListener('dragstart', () => {
+  dragLink.classList.add('dragging');
+});
+
+dragLink.addEventListener('dragend', () => {
+  dragLink.classList.remove('dragging');
+});
+
+dropArea.addEventListener('dragover', (e) => {
+  e.preventDefault(); // Toestaan dat je iets kunt slepen
+});
+
+dropArea.addEventListener('drop', (e) => {
+  e.preventDefault();
+  const dragging = document.querySelector('.dragging');
+  dropArea.appendChild(dragging); // Verplaats het gesleepte element naar de drop area
+});
+
