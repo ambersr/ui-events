@@ -148,5 +148,20 @@ fadeLink.addEventListener('blur', () => {
       }
     });
 
+    // Link 9 Bij hover knop flip (mouseenter & mouseleave)
+
+    const enterLink = document.querySelector('a:nth-of-type(9)');
+
+    enterLink.addEventListener('mouseenter', () => {
+      enterLink.classList.add('flipped');  // Start de animatie door de 'animate' klasse toe te voegen
+    });
+
+    enterLink.addEventListener('mouseleave', () => {
+      enterLink.classList.remove('flipped');  // Stop de animatie door de 'animate' klasse te verwijderen
+    });
+
+
+
+
 
 
