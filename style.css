@@ -268,3 +268,8 @@ a {
     border: #9d7beb;
   }
 }
+
+/*----------------------- Animatie 8 -----------------------*/
+.move {
+  transition: transform 0.2s ease-out; /* Deze zorgt voor een vloeiende beweging */
+}

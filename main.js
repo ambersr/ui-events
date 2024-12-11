@@ -125,5 +125,28 @@ fadeLink.addEventListener('blur', () => {
 
 // console.log('shake!');
 
+// Link 8 Geklikt op knop muisanimatie (click & mousemove)
+    const mouseLink = document.querySelector('a:nth-of-type(8)');
+    let isAnimating = false;
+
+    mouseLink.addEventListener('click', (e) => {
+      e.preventDefault();  // Voorkomt de standaard klikactie
+      isAnimating = !isAnimating;
+      if (isAnimating) {
+        mouseLink.classList.add('move');  // Voeg de animatieklasse toe
+      } else {
+        mouseLink.classList.remove('move');  // Verwijder de animatieklasse
+        mouseLink.style.transform = '';  // Zet de originele positie terug
+      }
+    });
+
+    // Beweging alleen als animatie is ingeschakeld
+    window.addEventListener('mousemove', (e) => {
+      if (isAnimating) {
+        const offsetX = (e.screenX - window.innerWidth / 2) / 10;
+        mouseLink.style.transform = `translateX(${offsetX}px)`; // Alleen de transformatie wordt toegepast
+      }
+    });
+
 
 
