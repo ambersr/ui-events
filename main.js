@@ -62,3 +62,18 @@ function shakeAnimation() {
 }
 
 shakeLink.addEventListener('animationend', shakeAnimation)
+
+
+// Link 3 Klik en druk een key toets in blurry background img (Keydown)
+let blurLink = document.querySelector('a:nth-of-type(3)')
+
+blurLink.addEventListener('keydown', blurAnimation)
+
+function blurAnimation() {
+  
+  blurLink.classList.toggle('blur')
+}
+
+// console.log('shake!');
+
+
