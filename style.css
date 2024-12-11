@@ -38,7 +38,6 @@ a {
   }
 }
 
-
 /*----------------------- Animatie 1 -----------------------*/
 
 .scrolling {
@@ -275,7 +274,6 @@ a {
 }
 
 /*----------------------- Animatie 10 -----------------------*/
-
 a:nth-of-type(10) {
   transition: transform 0.3s ease-in-out;
 }
@@ -298,4 +296,49 @@ a:nth-of-type(10) {
   /* Paars voor inactieve knoppen */
   color: white;
   /* Tekst kleur wit */
+}
+
+/*----------------------- Animatie 11 -----------------------*/
+a:nth-of-type(11) {
+  position: relative;
+  background: var(--highlight-secondary);
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.jump {
+  animation-name: jump;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-duration: 1.2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes jump {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+
+  30% {
+    transform: scale(0.9, 1.1) translateY(-5rem) rotate(10deg);
+  }
+
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+
+  57% {
+    transform: scale(1, 1) translateY(-0.5rem) rotate(-2deg);
+  }
+
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
 }
