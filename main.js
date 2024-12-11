@@ -77,3 +77,17 @@ function blurAnimation() {
 // console.log('shake!');
 
 
+
+// Link 4 Knop flip animatie (keyup)
+  const keyLink = document.querySelector('a:nth-of-type(4)');
+
+    document.addEventListener('keyup', (event) => {
+
+      if (event.key === " " || event.key === "Spacebar") {
+  
+        keyLink.classList.toggle('flipped');
+      }
+    });
+
+// console.log('shake!');
+

@@ -136,3 +136,17 @@ a:nth-of-type(1) {
   background: url(https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg);
   background-size: 120px;
 }
+
+
+/*----------------------- Animatie 4 -----------------------*/
+a:nth-of-type(4) {
+  transition: transform 0.3s ease-in-out;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+  transition: 0.3s ease-in-out;
+  background-color: #9d7beb;
+  border: #9d7beb;
+  color: #050840;
+}
