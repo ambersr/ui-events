@@ -244,3 +244,27 @@ a {
 .animate {
   animation: scale-fade-in 1s ease forwards; /* Pas de animatie toe bij focus */
 }
+
+/*----------------------- Animatie 7 -----------------------*/
+.reload {
+  animation: roll-in 2s cubic-bezier(0.25, 1, 0.5, 1);
+  animation-delay: 1s;
+}
+
+@keyframes roll-in {
+  0% {
+    -webkit-transform: translateX(-800px) rotate(-540deg);
+    transform: translateX(-800px) rotate(-540deg);
+    opacity: 0;
+    background-color: #9d7beb;
+  }
+
+  100% {
+    -webkit-transform: translateX(0) rotate(0deg);
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+    background-color: #9d7beb;
+    color: #050840;
+    border: #9d7beb;
+  }
+}

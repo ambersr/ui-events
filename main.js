@@ -113,6 +113,17 @@ fadeLink.addEventListener('blur', () => {
   fadeLink.classList.remove('animate');
 });
 
-fadeLink.addEventListener('animationend', fadeAnimation)
+// console.log('shake!');
+
+// Link 7 Load right animation
+    window.addEventListener('load', () => { // Wacht tot de pagina volledig is geladen
+
+      const loadLink = document.querySelector('section a:nth-of-type(7)');
+      
+      loadLink.classList.add('reload');
+    });
+
+// console.log('shake!');
+
 
 
