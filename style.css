@@ -273,3 +273,29 @@ a {
 .move {
   transition: transform 0.2s ease-out; /* Deze zorgt voor een vloeiende beweging */
 }
+
+/*----------------------- Animatie 10 -----------------------*/
+
+a:nth-of-type(10) {
+  transition: transform 0.3s ease-in-out;
+}
+
+.colorchange {
+  background-color: #7ce7c9;
+  border: #7ce7c9;
+  color: #050840;
+  animation: shake 2s linear;
+}
+
+.active {
+  background-color: #800080;
+  /* Paars */
+  color: white;
+}
+
+.inactive {
+  background-color: #800080;
+  /* Paars voor inactieve knoppen */
+  color: white;
+  /* Tekst kleur wit */
+}

@@ -160,7 +160,19 @@ fadeLink.addEventListener('blur', () => {
       enterLink.classList.remove('flipped');  // Stop de animatie door de 'animate' klasse te verwijderen
     });
 
+    // Link 10 Resize (resize)
 
+      const sizeLink = document.querySelector('a:nth-of-type(10)');
+
+    // Luister naar het resize event
+    window.addEventListener('resize', () => {
+      // Als de breedte van het venster kleiner is dan 600px, activeer de animatie
+      if (window.innerWidth < 600) {
+        sizeLink.classList.add('colorchange');  // Start de animatie
+      } else {
+        sizeLink.classList.remove('colorchange');  // Stop de animatie
+      }
+    });
 
 
 
